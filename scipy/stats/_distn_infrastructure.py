@@ -2795,7 +2795,7 @@ class rv_discrete(rv_generic):
         return dct
 
     def _nonzero(self, k, *args):
-        return True if k or k==0 else False
+        return k != 0
 
     def _pmf(self, k, *args):
         return self._cdf(k, *args) - self._cdf(k-1, *args)
